@@ -59,13 +59,11 @@ with open(file_to_save, "w") as txt_file:
         f'\nElection Results\n'
         f'-------------------------\n'
         f'Total Votes: {total_votes:,}\n'
-        f'-------------------------\n')
-                
+        f'-------------------------\n')          
     print(election_results, end="")
-    #save the final vote count to the text file
+   #save the final vote count to the text file
     txt_file.write(election_results)
-
-
+  
     #calculate total percentage of votes each candidate won
     # go through the candidate list
     for candidate_name in candidate_votes:
@@ -73,10 +71,15 @@ with open(file_to_save, "w") as txt_file:
             votes = candidate_votes[candidate_name]
             #calculate the percentage of the vote
             vote_percentage = float(votes) / float(total_votes) * 100
+            # print candidate results
+            candidate_results = (
+                f"{candidate_name}: {vote_percentage:.1f}%: ({votes:,})\n")
+            
+            #print each candidate, their voter count, and the percentage to the terminal
+            print(candidate_results)
+            #save the candidate results to our text file
+            txt_file.write(candidate_results)
         
-            #Print out each candidate's name, vote count, and percentage of votes to the terminal
-            #print(f"{candidate_name}: {vote_percentage:.1f}: ({votes:,})\n")
-
             #Determine winning vote count and candidate
             if (votes > winner_count) and (vote_percentage > winner_percent):
                 #if true then set winner_count = votes and winner_percent = vote_percentage
@@ -88,10 +91,10 @@ with open(file_to_save, "w") as txt_file:
         f"--------------------------------\n"
         f'Winner: {winner_candidate}\n'
         f"Winning Vote Count: {winner_count:,}\n"
-        f"Winning Percentage: {winner_percent:.1f}\n"
+        f"Winning Percentage: {winner_percent:.1f}%\n"
         f"--------------------------------\n")
-    #print(winning_candidate_summary)
-
+    print(winning_candidate_summary)
+    txt_file.write(winning_candidate_summary)
     #3. Print the total votes   
-    #print(total_votes)
+
     
