@@ -13,15 +13,25 @@ The task included identifying the following
 8. The winner of the election based on the popular vote.
 
 ## Research
-Using a bulleted list, address the following election outcomes. Use images or examples of your code as support where necessary.
+In conducting our research through both a count of total votes in the script and an initial review of the CSV document we were able to confirm that there were 369,711 votes casts between the three counties for this precinct.
 
-How many votes were cast in this congressional election?
-Provide a breakdown of the number of votes and the percentage of total votes for each county in the precinct.
-Which county had the largest number of votes?
-Provide a breakdown of the number of votes and the percentage of the total votes each candidate received.
-Which candidate won the election, what was their vote count, and what was their percentage of the total votes?
+![Image 1](/Terminal_output.png)
+
+we were able to utilize some scripting in order to quickly parse through the data and return the results below.
+
+1. Total votes and percentage of total votes per county.
+  1. Denver - 306,055 - 82.8%
+  2. Jefferson - 38,855 - 10.5%
+  3. Arapahoe - 24,801 - 6.7%
+
+2. Total votes and percentage of total votes per candidate.
+  1. Diana Degette - 272,892 - 73.8%
+  2. Charles Casper Stockham - 85,213 - 23.0%
+  3. Raymon Anthony Doane - 11,606, 3.1%
+
+
+
 ## Summary
-In a summary statement, provide a business proposal to the election commission on how this script can be used—with some modifications—for any election. Give at least two examples of how this script can be modified to be used for other elections.
-## Challenge Overview
-
-## Challenge Summary
+ In summary I feel that the scripting developed has performed extremely well and can quickly be utilized to identify similar results for any election going forward.  If we had the number of registered voters per county we could add those into the code as a dictionary then use that along with actual votes to get a true count of voter participation results per county.
+ 
+ 
